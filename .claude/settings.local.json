@@ -2,5 +2,15 @@
   "permissions": {
     "allow": ["mcp__playwright"],
     "deny": []
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          { "type": "command", "command": "node ./hooks/read_hooks.js" }
+        ]
+      }
+    ]
   }
 }
